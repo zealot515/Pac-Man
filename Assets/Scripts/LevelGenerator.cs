@@ -6,8 +6,14 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 
-    public GameObject [] LevelAsset;
-  
+    public GameObject Empty;
+    public GameObject OutsideCorner;
+    public GameObject OutsideWall;
+    public GameObject InsideCorner;
+    public GameObject InsideWall;
+    public GameObject StandardPellet;
+    public GameObject PowerPellet;
+    public GameObject TShape;
     //float OCx = 10f;
     //float OCy = 20f;
     // Start is called before the first frame update
