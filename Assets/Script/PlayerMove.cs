@@ -38,34 +38,34 @@ public class PlayerMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()//主角循环移动
+    void Update()//Pac Frog move clockwise
     {
        HpUi.text = HP.ToString();
        ScoreUi.text = Score.ToString();
-       // if (Input.GetKeyDown(KeyCode.Escape))
-       // {
-       //     Application.Quit();
-      //  }
+    if (Input.GetKeyDown(KeyCode.Escape))
+     {
+          Application.Quit();
+      }
 
-       // Debug.Log(ThisCount);
-       // this.transform.position = Vector2.Lerp(this.transform.position, vector3s[ThisCount], Time.deltaTime);
-       // this.transform.localEulerAngles = new Vector3(0, 0, -90 * (ThisCount + 1));
+       Debug.Log(ThisCount);
+      this.transform.position = Vector2.Lerp(this.transform.position, vector3s[ThisCount], Time.deltaTime);
+      this.transform.localEulerAngles = new Vector3(0, 0, -90 * (ThisCount + 1));
 
-      //  if (Vector2.Distance(this.transform.position, vector3s[ThisCount]) <= 0.05f)
-       // {
-        //    ThisCount++;
-       //     if (ThisCount > 3)
-       //     {
-       //         ThisCount = 0;
-       //     }
-      //  }
+      if (Vector2.Distance(this.transform.position, vector3s[ThisCount]) <= 0.05f)
+      {
+       ThisCount++;
+       if (ThisCount > 3)
+      {
+       ThisCount = 0;
+       }
+     }
 
         //text.text = Score.ToString();
 
-        InputMove();
+        //InputMove(); // Pac Frog move follow kwyboard
 
     }
-    public void InputMove()//主角按键移动
+    public void InputMove()//Pac Frog move follow kwyboard
     {
         if (Input.GetKeyDown(KeyCode.A)&&!Move)
         {
@@ -136,22 +136,22 @@ public class PlayerMove : MonoBehaviour
        
     }
 
-    public void Playaudio()//主角音效控制
+    public void Playaudio()//Sound clips 
     {
         Score += 1;
         this.GetComponent<AudioSource>().PlayOneShot(audioClips[0]);
     }
-    public void Playaudio1()//主角音效控制
+    public void Playaudio1()
     {
         Score += 1;
         GameType = 1;
         this.GetComponent<AudioSource>().PlayOneShot(audioClips[0]);
     }
-    public void Playaudio2()//主角音效控制
+    public void Playaudio2()
     {
         this.GetComponent<AudioSource>().PlayOneShot(audioClips[1]);
     }
-    public void Playaudio3()//主角音效控制
+    public void Playaudio3()
     {
         Score += 10;
         this.GetComponent<AudioSource>().PlayOneShot(audioClips[0]);

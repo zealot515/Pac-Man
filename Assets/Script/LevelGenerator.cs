@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
         {2,5,3,4,4,3,5,3,4,4,4,3,5,4},
         {2,6,4,0,0,4,5,4,0,0,0,4,5,4},
         {2,5,3,4,4,3,5,3,4,4,4,3,5,3},
-        {2,5,5,8,5,5,5,5,5,5,5,5,5,5},
+        {2,5,5,5,5,5,5,5,5,5,5,5,5,5},
         {2,5,3,4,4,3,5,3,3,5,3,4,4,4},
         {2,5,3,4,4,3,5,4,4,5,3,4,4,3},
         {2,5,5,5,5,5,5,4,4,5,5,5,5,4},
@@ -27,7 +27,7 @@ public class LevelGenerator : MonoBehaviour
 
   public static  int[,] LevelMap4 = new int[29, 28];
     // Start is called before the first frame update
-    void Start()//地图初始化
+    void Start()// Map Instantiate
     {
         int[,] LevelMap1=new int[14,14];
         for (int i = 0; i < 14; i++)

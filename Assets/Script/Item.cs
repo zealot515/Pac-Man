@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     {
         ThisPlayer = GameObject.FindGameObjectWithTag("Player");
     }
-    //吃豆子判断
+    //eat pellet
     // Update is called once per frame
     void Update()
     {

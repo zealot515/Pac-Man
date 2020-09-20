@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
         this.GetComponent<AudioSource>().clip = audioClips[0];
         this.GetComponent<AudioSource>().Play();
     }
-    //鬼音效控制
+    //Ghost soundclips
     // Update is called once per frame
     void Update()
     {

@@ -35,7 +35,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ThisType == 1)//鬼移动
+        if (ThisType == 1)//Ghost move
         {
             MoveRange += Time.deltaTime;
             if (MoveVec==1&& !Move)
@@ -134,12 +134,12 @@ public class Monster : MonoBehaviour
 
             }
         }
-        if (PlayerMove.GameType == 1)//鬼恐惧
+        if (PlayerMove.GameType == 1)//Ghost scared
         {
             this.GetComponent<Animator>().SetInteger("State", 1);
             ThisType = 2;
         }
-        if (ThisType == 2)//鬼恐惧计时
+        if (ThisType == 2)//Ghost scared counter
         {
             TypeTime += Time.deltaTime;
             if (TypeTime >= 4)
@@ -150,7 +150,7 @@ public class Monster : MonoBehaviour
                 PlayerMove.GameType =0;
             }
         }
-        if (ThisType ==4)//鬼死亡
+        if (ThisType ==4)//Ghost dead
         {
           
             Die = true;
@@ -166,7 +166,7 @@ public class Monster : MonoBehaviour
                 Die = false;
             }
         }
-        if (Vector2.Distance(this.transform.position, ThisPlayer.transform.position) <= 0.2f)//鬼碰撞判断
+        if (Vector2.Distance(this.transform.position, ThisPlayer.transform.position) <= 0.2f)
         {
             if (ThisType == 1&&!Hit)
             {
