@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HP:'
+  m_Text: HP
 --- !u!222 &154419976
 CanvasRenderer:
   m_ObjectHideFlags: 0
